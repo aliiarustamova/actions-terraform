@@ -7,6 +7,6 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
 }
 
-variable region {}
-variable ami_id {}
-variable instance_type {}
+#variable region {}
+#variable ami_id {}
+#variable instance_type {}
