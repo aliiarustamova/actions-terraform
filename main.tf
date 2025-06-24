@@ -1,15 +1,15 @@
 provider aws {
-    region = "us-east-2"
+    region = var.region
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-06971c49acd687c30"
-  instance_type = "t2.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
 }
 
-#variable region {}
-#variable ami_id {}
-#variable instance_type {}
+variable region {}
+variable ami_id {}
+variable instance_type {}
 
 terraform {
   backend "s3" {
